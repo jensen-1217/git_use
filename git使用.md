@@ -150,4 +150,25 @@ git merge feature-branch
 git add .
 git commit -m "解决冲突"
 ```
-
+### git常见命令
+1.初始化工作区: git init
+2.查看当前工作区的代码文件状态：git status
+3.将工作区的代码文件提交到暂存区：git add 文件名
+4.将暂存区的代码文件提交到本地仓库：git commit -m '提交信息'
+5.差异化比较：
+    1）工作区和暂存区：git diff 文件名
+    2）暂存区和本地仓库：git diff --cached 文件名
+    3）工作区和本地仓库: git diff HEAD 文件名
+6.版本回退：回退哪个版本
+       1）回退到上一个版本(即提交位置):git reset --hard HEAD^
+       2)回退到指定版本：git reset --hard 版本号
+7.查看提交日志：
+       1）git log/git reflog(特点是查看的提交版本号比较短)
+8.撤销工作区：git checkout 文件名
+9.将代码从暂存区撤销到工作区：git reset HEAD 文件名
+10.分支：
+        1）创建分支：git branch 分支名
+        2）查看分支：git branch
+        3)切换分支：git checkout 分支名
+        4）合并分支（如果将其他分支合并到master主分支上。那么需要切换到master上）：git merge 分支名
+        5）删除分支：git branch -d 分支名
